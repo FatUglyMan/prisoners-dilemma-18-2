@@ -34,13 +34,15 @@ def move(my_history, their_history, my_score, their_score):
             return 'c'
         else:
             return 'b'
-    elif len(their_history) >= 2:
+    elif len(their_history) >= 3:
         if (their_history[-1] == 'c' and their_history[-2] == 'b') or (their_history[-1] == 'b' and their_history[-2] == 'c'):
             return their_history[-2]
-        elif (their_history[-1] == their_history[-2] == their_history[-3]):
+        elif (their_history[-1] == their_history[-2]):
             return their_history[-1]
         else:
             return 'b'
+    else:
+        return 'b'
             
 #return 'c'
 #return 'b'
